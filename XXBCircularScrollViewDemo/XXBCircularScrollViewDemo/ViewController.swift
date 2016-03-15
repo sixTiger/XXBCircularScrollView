@@ -53,6 +53,9 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     //MARK:- control
     func _setupFrameWithCurrentIndex() {
+        _scrollView!.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
         let count = _iteamArray.count
         let currentView = _iteamArray[_currentIndex]
         var currentViewFrame = currentView.frame
